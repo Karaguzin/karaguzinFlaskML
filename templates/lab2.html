@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+{{ super() }}
+<p>Логистическая регрессия для определения качества вина
+<form action="/p_lab2" method="POST">
+    <p><input type="text" class="form_text" name="list1"> фикс кислотность</p>
+    <p><input name="list2" class="form_text" type="text"> летучая кислотность</p>
+    <p><input type="text" class="form_text" name="list3"> лимонная кислота</p>
+    <p><input name="list4" class="form_text" type="text"> остаточный сахар</p>
+    <p><input type="text" class="form_text" name="list5"> хлориды</p>
+    <p><input name="list6" class="form_text" type="text"> свободный диоксид серы</p>
+    <p><input type="text" class="form_text" name="list7"> общий диоксид серы</p>
+    <p><input name="list8" class="form_text" type="text"> плотность</p>
+    <p><input type="text" class="form_text" name="list9"> pH</p>
+    <p><input name="list10" class="form_text" type="text"> сульфаты</p>
+    <p><input type="text" class="form_text" name="list11"> алкоголь</p>
+    <input type="submit" class="form_btn" value="Узнать качество вина">
+    <h1>{{class_model}}</h1>
+    </p>
+</form>
+
+{% endblock %}
